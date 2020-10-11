@@ -1,0 +1,33 @@
+{
+  "name": "academic-rest-api",
+  "version": "1.0.0",
+  "description": "rest api",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelCuellarR/Academic_API_Rest.git"
+  },
+  "keywords": [
+    "academic",
+    "rest",
+    "api"
+  ],
+  "author": "Miguel Angel Cuellar Romero",
+  "license": "ISC",
+  "homepage": "https://github.com/MiguelCuellarR/Academic_API_Rest.git",
+  "dependencies": {
+    "config": "^3.3.2",
+    "crypto-js": "^4.0.0",
+    "crypto.js": "^2.0.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "mongoose-unique-validator": "^2.0.3",
+    "nodemon": "^2.0.4",
+    "save": "^2.4.0"
+  }
+}
