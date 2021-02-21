@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const db = require("../db-connection/mongodb");
 
 const schema = require("../schemas/student_group.schema");
+db();
 
 schema.statics = {
     create : function(data, cb){
@@ -13,6 +15,9 @@ schema.statics = {
     getByCode : function(query, cb){
         this.find(query, cb);
     },
+    getByID : function(query, cb){
+        this.find(query, cb);
+    },
     update : function(query, data, cb){
         this.findOneAndUpdate(query, {$set: data}, {new: true}, cb);
     },
@@ -20,5 +25,5 @@ schema.statics = {
         this.findOneAndDelete(query)
     }
 };
-const dto = mongoose.model("coll_student_group", schema);
+const dto = mongoose.model("coll_studentgroup", schema);
 module.exports = dto;

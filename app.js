@@ -1,4 +1,5 @@
 //mongodb+srv://acad-rest-api-user:TIzsQQRpXU5B5T9w@cluster.tkoj9.mongodb.net/AcademicDB?retryWrites=true&w=majority
+
 const express = require("express");
 const config = require("config");
 const bodyParser = require("body-parser");
@@ -24,7 +25,7 @@ const userRoutes = require("./routes/user.route");
 userRoutes(app);
 
 tkFn = require("./middleware/verifyToken");
-app.use(tkFn);
+//app.use(tkFn);
 
 const facultyRoutes = require("./routes/faculty.route");
 facultyRoutes(app);
@@ -43,6 +44,12 @@ periodRoutes(app);
 
 const courseRoutes = require("./routes/course.route");
 courseRoutes(app);
+
+const groupRoutes = require("./routes/group.route");
+groupRoutes(app);
+
+const student_groupRoutes = require("./routes/student_group.route");
+student_groupRoutes(app);
 
 app.listen(port, () => {
     console.log("Server is running...");

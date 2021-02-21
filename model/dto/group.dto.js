@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const db = require("../db-connection/mongodb");
 
 const schema = require("../schemas/group.schema");
+db();
 
 schema.statics = {
     create : function(data, cb){
@@ -10,7 +12,7 @@ schema.statics = {
     getAll : function(query, cb){
         this.find(query, cb);
     },
-    getByCode : function(query, cb){
+    getByID : function(query, cb){
         this.find(query, cb);
     },
     update : function(query, data, cb){

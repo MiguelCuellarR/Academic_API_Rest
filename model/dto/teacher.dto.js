@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const db = require("../db-connection/mongodb");
 
 const schema = require("../schemas/teacher.schema");
+db();
 
 schema.statics = {
     create : function(data, cb){
@@ -11,6 +13,9 @@ schema.statics = {
         this.find(query, cb);
     },
     getByDocument : function(query, cb){
+        this.find(query, cb);
+    },
+    getByID : function(query, cb){
         this.find(query, cb);
     },
     update : function(query, data, cb){

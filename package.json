@@ -18,7 +18,7 @@
   ],
   "author": "Miguel Angel Cuellar Romero",
   "license": "ISC",
-  "homepage": "https://github.com/MiguelCuellarR/Academic_API_Rest.git",
+  
   "dependencies": {
     "config": "^3.3.2",
     "crypto-js": "^4.0.0",

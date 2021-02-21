@@ -4,6 +4,10 @@ module.exports = (app) => {
     app.get("/period", (req, res, next) => {
         controller.getAll(req, res, next)
     });
+
+    app.get("/period/byid/:id", (req, res, next) => {
+        controller.getbyID(req, res, next)
+    });
     
     app.post("/period", (req, res, next) => {
         controller.createPeriod(req, res, next)

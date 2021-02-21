@@ -8,6 +8,10 @@ module.exports = (app) => {
     app.get("/course/bycode/:code", (req, res, next) => {
         controller.getByCode(req, res, next)
     });
+
+    app.get("/course/byid/:id", (req, res, next) => {
+        controller.getByID(req, res, next)
+    });
     
     app.post("/course", (req, res, next) => {
         controller.createCourse(req, res, next)

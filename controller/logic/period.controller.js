@@ -1,5 +1,4 @@
 const periodDto = require("../../model/dto/period.dto");
-const config = require("config")
 
 exports.createPeriod = (req, res, next) => {
     let prd = {

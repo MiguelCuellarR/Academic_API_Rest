@@ -1,5 +1,4 @@
 const courseDto = require("../../model/dto/course.dto");
-const config = require("config")
 
 exports.createCourse = (req, res, next) => {
     let course = {
