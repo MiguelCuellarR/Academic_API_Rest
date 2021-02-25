@@ -61,6 +61,24 @@ exports.getAll = (req, res, next) => {
     });
 };
 
+
+exports.getByID = (req, res, next) => {
+    periodDto.getByID({_id: req.params.id}, (err, data) => {
+        if(err){
+            return res.status(400).json(
+                {
+                    error: err
+                }
+            );
+        }
+        return res.status(200).json(
+            {
+                info: data
+            }
+        )
+    });
+};
+
 exports.deletePeriod = (req, res, next) => {
     periodDto.delete({_id: req.body.id}, (err, data) => {
         if(err){

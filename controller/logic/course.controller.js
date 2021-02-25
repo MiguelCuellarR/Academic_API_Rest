@@ -61,8 +61,24 @@ exports.getAll = (req, res, next) => {
 };
 
 exports.getByCode = (req, res, next) => {
+    courseDto.getByCode({ code: req.params.code }, (err, data) => {
+        if (err) {
+            return res.status(400).json(
+                {
+                    error: err
+                }
+            );
+        }
+        res.status(200).json(
+            {
+                info: data
+            }
+        )
+    });
+};
 
-    studentDto.getByCode({ code: req.params.code }, (err, data) => {
+exports.getByID = (req, res, next) => {
+    courseDto.getByCode({ _id: req.params.id }, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {

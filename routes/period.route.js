@@ -6,7 +6,7 @@ module.exports = (app) => {
     });
 
     app.get("/period/byid/:id", (req, res, next) => {
-        controller.getbyID(req, res, next)
+        controller.getByID(req, res, next)
     });
     
     app.post("/period", (req, res, next) => {
