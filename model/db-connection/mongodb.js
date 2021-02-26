@@ -9,7 +9,7 @@ const mongodbInfo = config.get("db-connections").mongodb;
 const connStr = `mongodb+srv://${mongodbInfo.user}:${mongodbInfo.password}@${mongodbInfo.host}/${mongodbInfo.dbname}?retryWrites=true&w=majority`
 
 module.exports = () => {
-    mongoose.connect(connStr);
+    mongoose.connect(connStr, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false});
 
     mongoose.connection.on("connected", () => {
         console.log("mongoDB Server Connected");
